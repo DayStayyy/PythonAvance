@@ -4,7 +4,6 @@ on: ['push','pull_request']
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -30,3 +29,10 @@ jobs:
       - name: Test with pytest
         run: |
           pytest --cov=PythonAvance --cov-report=xml --cov-report=html
+      - name: Pytest Coverage Comment
+        uses: dawidd6/action-pytest-cov@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          path: .
+          fail_under: 50
+          comment: true
