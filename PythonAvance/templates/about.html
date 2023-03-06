@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block title %}FastAPI Starter{% endblock %} {%
+block head %} {{ super() }} {% endblock %} {% block page_content %} {% include
+'include/sidebar.html' %}
+<h1>About Us</h1>
+<p>on est les meilleurs</p>
+
+{{data.page}}
+<h6>{{data.soustitre}}</h6>
+{% endblock %} {% block scripts %} {{ super() }} {% endblock %}
