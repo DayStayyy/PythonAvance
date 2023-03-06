@@ -1,6 +1,6 @@
 name: Python package
 
-on: 'pull_request'
+on: ['push','pull_request']
 
 jobs:
   build:
@@ -30,7 +30,9 @@ jobs:
           flake8 PythonAvance --count --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
+          cd tests
           pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=PythonAvance tests/ | tee pytest-coverage.txt
+          cd ../
       - name: Pytest Coverage Comment
         uses: MishaKav/pytest-coverage-comment@main
         with:
