@@ -28,7 +28,7 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
-          pytest --cov=PythonAvance --cov-report=xml --cov-report=html | tee pytest-coverage.txt
+          pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=PythonAvance tests/ | tee pytest-coverage.txt
       - name: Pytest Coverage Comment
         uses: MishaKav/pytest-coverage-comment@main
         with:
