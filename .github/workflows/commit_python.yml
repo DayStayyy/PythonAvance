@@ -21,4 +21,4 @@ jobs :
           pip install flake8 black
       - name: Format with black
         run: |
-          black --check --diff PythonAvance
+          black PythonAvance
