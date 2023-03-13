@@ -17,4 +17,18 @@ def makeMeanTemp(df):
     plt.legend(["temp mean","year"])
     plt.savefig("mean_temp.png")
 
-makeMeanTemp(df)
+
+def makeEolienne(df):
+    df['dd'] = pd.to_numeric(df['dd'], errors='coerce')
+    df['eoliene_can_run'] = (df['dd'] > 4.16667) & (df['dd'] < 25)
+    # Count the number of True and False values in the 'is_valid' column
+    value_counts = df['eoliene_can_run'].value_counts()
+    # Plot a pie chart of the value counts
+    plt.pie(value_counts, labels=value_counts.index, autopct='%1.1f%%')
+    plt.title('% of days eoliene can run')
+    plt.savefig("eoliene_can_run.png")
+
+
+
+makeEolienne(df)
+
