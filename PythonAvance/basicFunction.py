@@ -1,8 +1,2 @@
-def addition(a,b):
+def addition(a: int,b: int) -> int:
     return a+b
-
-def conditional(a,b):
-    if a>b:
-        return a
-    else:
-        return b
