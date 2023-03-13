@@ -35,7 +35,7 @@ async def page(request: Request):
 @app.get("/page/png", response_class=HTMLResponse)
 async def page(request: Request):
     data = {
-        "page": "png",
+        "page": "Analyse des données Météo France",
         "soustitre": "les png"
     }
     return templates.TemplateResponse("png.html", {"request": request, "data": data})
@@ -48,3 +48,36 @@ async def page(request: Request):
         "soustitre": "Explications :"
     }
     return templates.TemplateResponse("annee_chaudes.html", {"request": request, "data": data})
+
+
+@app.get("/page/png/changement_temp", response_class=HTMLResponse)
+async def page(request: Request):
+    data = {
+        "page": "Observe-t-on un un changement de températures dans le temps ?",
+        "soustitre": "Explications :"
+    }
+    return templates.TemplateResponse("changement_temp.html", {"request": request, "data": data})
+
+
+@app.get("/page/png/vents", response_class=HTMLResponse)
+async def page(request: Request):
+    data = {
+        "page": "Il y a-t-il beaucoup de jours depuis 1996 où les éoliennes n'ont pas pu tourner ?",
+        "soustitre": "Explications :"
+    }
+    return templates.TemplateResponse("vents.html", {"request": request, "data": data})
+
+@app.get("/page/png/changement_semaine", response_class=HTMLResponse)
+async def page(request: Request):
+    data = {
+        "page": "Observe-t-on des changements forts de températures au sein d'une semaine ?",
+        "soustitre": "Explications :"
+    }
+    return templates.TemplateResponse("changement_semaine.html", {"request": request, "data": data})
+
+
+
+
+
+
+
