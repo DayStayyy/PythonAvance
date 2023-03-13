@@ -9,14 +9,14 @@ templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/", response_class=HTMLResponse, status_code=200)
-async def home(request: Request) -> templates.TemplateResponse():
+async def home(request: Request):
     data = {
         "page": "Bienvenue sur DataMétéo"
     }
     return templates.TemplateResponse("page.html", {"request": request, "data": data})
 
 @app.get("/page/about", response_class=HTMLResponse)
-async def about(request: Request) -> templates.TemplateResponse():
+async def about(request: Request):
     data = {
         "page": "About us",
         "soustitre": "Ynov informatique"
@@ -24,7 +24,7 @@ async def about(request: Request) -> templates.TemplateResponse():
     return templates.TemplateResponse("about.html", {"request": request, "data": data})
 
 @app.get("/page/png", response_class=HTMLResponse)
-async def png(request: Request) -> templates.TemplateResponse():
+async def png(request: Request):
     data = {
         "page": "Analyse des données Météo France",
         "soustitre": "les png"
@@ -33,7 +33,7 @@ async def png(request: Request) -> templates.TemplateResponse():
 
 
 @app.get("/page/png/annee_chaudes", response_class=HTMLResponse)
-async def annee_chaudes(request: Request) -> templates.TemplateResponse():
+async def annee_chaudes(request: Request):
     data = {
         "page": "Quelles sont les 10 années les plus chaudes depuis 1996 ?",
         "soustitre": "Explications :"
@@ -42,7 +42,7 @@ async def annee_chaudes(request: Request) -> templates.TemplateResponse():
 
 
 @app.get("/page/png/changement_temp", response_class=HTMLResponse)
-async def changement_temp(request: Request) -> templates.TemplateResponse():
+async def changement_temp(request: Request):
     data = {
         "page": "Observe-t-on un un changement de températures dans le temps ?",
         "soustitre": "Explications :"
@@ -51,7 +51,7 @@ async def changement_temp(request: Request) -> templates.TemplateResponse():
 
 
 @app.get("/page/png/vents", response_class=HTMLResponse)
-async def vents(request: Request) -> templates.TemplateResponse():
+async def vents(request: Request):
     data = {
         "page": "Il y a-t-il beaucoup de jours depuis 1996 où les éoliennes n'ont pas pu tourner ?",
         "soustitre": "Explications :"
@@ -59,7 +59,7 @@ async def vents(request: Request) -> templates.TemplateResponse():
     return templates.TemplateResponse("vents.html", {"request": request, "data": data})
 
 @app.get("/page/png/changement_semaine", response_class=HTMLResponse)
-async def changement_semaine(request: Request) -> templates.TemplateResponse():
+async def changement_semaine(request: Request):
     data = {
         "page": "Observe-t-on des changements forts de températures au sein d'une semaine ?",
         "soustitre": "Explications :"
