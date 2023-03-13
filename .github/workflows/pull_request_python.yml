@@ -32,8 +32,7 @@ jobs:
         - name: Test with pytest
           run: |
             cd tests
-            pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=PythonAvance tests/ | tee pytest-coverage.txt
-            coverage report --cov-fail-under=100
+            pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=PythonAvance --cov-fail-under=100 tests/ | tee pytest-coverage.txt
             cd ../
         - name: Pytest Coverage Comment
           uses: MishaKav/pytest-coverage-comment@main
@@ -70,8 +69,7 @@ jobs:
         - name: Test with pytest
           run: |
             cd tests
-            pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=PythonAvance tests/ | tee pytest-coverage.txt
-            coverage report --cov-fail-under=100
+            pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=PythonAvance --cov-fail-under=100 tests/ | tee pytest-coverage.txt
             cd ../
         - name: Pytest Coverage Comment
           uses: MishaKav/pytest-coverage-comment@main
@@ -108,8 +106,7 @@ jobs:
         - name: Test with pytest
           run: |
             cd tests
-            pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=PythonAvance tests/ | tee pytest-coverage.txt
-            coverage report --cov-fail-under=100
+            pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=PythonAvance --cov-fail-under=100 tests/ | tee pytest-coverage.txt
             cd ../
         - name: Pytest Coverage Comment
           uses: MishaKav/pytest-coverage-comment@main
