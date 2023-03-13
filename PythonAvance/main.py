@@ -18,10 +18,9 @@ async def home(request: Request):
 @app.get("/page/about", response_class=HTMLResponse)
 async def page(request: Request):
     data = {
-        "page": "about",
-        "soustitre": "aaaon est les meilleurs"
+        "page": "About us",
+        "soustitre": "Ynov informatique"
     }
-    # return templates.TemplateResponse("base.html", {"request": request, "data": data})
     return templates.TemplateResponse("about.html", {"request": request, "data": data})
 
 @app.get("/page/info", response_class=HTMLResponse)

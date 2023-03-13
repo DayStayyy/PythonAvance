@@ -1,9 +1,15 @@
 {% extends "base.html" %} {% block title %}FastAPI Starter{% endblock %} {%
 block head %} {{ super() }} {% endblock %} {% block page_content %} {% include
 'include/sidebar.html' %}
-<h1>About Us</h1>
-<p>on est les meilleurs</p>
-
-{{data.page}}
+<h1 class="display-1">{{data.page}}</h1>
 <h6>{{data.soustitre}}</h6>
+<br />
+<div>
+  <p>Nous sommes des étudiants d'Ynov en B3</p>
+  <ul>
+    <li>Valentin DIOLOGENT</li>
+    <li>Adrien CLAMADIEU</li>
+    <li>Clément AUGIER de MOUSSAC</li>
+  </ul>
+</div>
 {% endblock %} {% block scripts %} {{ super() }} {% endblock %}
