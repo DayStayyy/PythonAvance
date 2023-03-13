@@ -4,7 +4,7 @@ block head %} {{ super() }} {% endblock %} {% block page_content %} {% include
 <h1>Analyse de données</h1>
 <p>azedrt</p>
 
-<div class="card" style="width: 18rem">
+<!-- <div class="card" style="width: 18rem">
   <img
     src="https://hips.hearstapps.com/hmg-prod/images/jokes-for-kids-14-1631055180.png?crop=1xw:0.6666666666666666xh;center,top&resize=980:*"
     class="card-img-top"
@@ -19,8 +19,40 @@ block head %} {{ super() }} {% endblock %} {% block page_content %} {% include
     </p>
     <a href="png/annee_chaudes" class="btn btn-primary">Go somewhere</a>
   </div>
-</div>
+</div> -->
 
-{{data.page}}
-<h6>{{data.soustitre}}</h6>
-{% endblock %} {% block scripts %} {{ super() }} {% endblock %}
+<p>_______________________</p>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <img
+        src="https://hips.hearstapps.com/hmg-prod/images/jokes-for-kids-14-1631055180.png?crop=1xw:0.6666666666666666xh;center,top&resize=980:*"
+        class="card-img-top"
+        alt="notFound"
+      />
+      <div class="card-body">
+        <h5 class="card-title">
+          Quelles sont les 10 années les plus chaudes depuis 1996 ?
+        </h5>
+        <p class="card-text">
+          Evolution des températures max en France depuis 1996
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          This is a longer card with supporting text below as a natural lead-in
+          to additional content. This content is a little bit longer.
+        </p>
+      </div>
+    </div>
+  </div>
+  {{data.page}}
+  <h6>{{data.soustitre}}</h6>
+  {% endblock %} {% block scripts %} {{ super() }} {% endblock %}
+</div>

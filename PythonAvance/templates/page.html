@@ -3,6 +3,49 @@
 {% extends "base.html" %} {% block title %}FastAPI Starter{% endblock %} {%
 block head %} {{ super() }} {% endblock %} {% block page_content %} {% include
 'include/sidebar.html' %}
-<h1>Welcome to FastAPI Starter.</h1>
 
+<h1 class="display-1">{{data.page}}</h1>
+<h3>
+  Ce site a pour but d'expliquer des données métérologiques<small
+    class="text-muted"
+    >Nous ne sommes pas métérologue</small
+  >
+</h3>
+<br />
+<br />
+<style></style>
+<div>
+  <dl class="row align-middle" style="text-align: center">
+    <dt class="col-sm-3">Description du projet</dt>
+    <dd class="col-sm-9">
+      Nous allons tenter de répondre à différentes question afin d'analyser
+      l'évolution de certains parametres météroliques dans le temps
+    </dd>
+
+    <dt class="col-sm-3">Qui sommes nous ?</dt>
+    <dd class="col-sm-9">
+      <dl class="row">
+        <!-- <dt class="col-sm-4">Nested definition list</dt> -->
+        <dd class="col-sm-4"><p>Valentin DIOLOGENT</p></dd>
+        <dd class="col-sm-4"><p>Adrien CLAMADIEU</p></dd>
+        <dd class="col-sm-4"><p>Clément AUGIER de MOUSSAC</p></dd>
+      </dl>
+    </dd>
+
+    <dt class="col-sm-3">Pourquoi ?</dt>
+    <dd class="col-sm-9">
+      Ce projet a été réalisé dans le cadre d'un cours de Python en B3
+    </dd>
+
+    <dt class="col-sm-3 text-truncate">Sources des données</dt>
+    <dd class="col-sm-9">
+      <a
+        href="https://donneespubliques.meteofrance.fr/?fon
+    d=produit&id_produit=90&id_rubrique=32"
+        class="link-primary"
+        >Météo France</a
+      >
+    </dd>
+  </dl>
+</div>
 {{data.page}} {% endblock %} {% block scripts %} {{ super() }} {% endblock %}
