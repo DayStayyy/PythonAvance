@@ -69,7 +69,7 @@ jobs:
         - name: Test with pytest
           run: |
             cd tests
-            pytest --cov=PythonAvance --cov-fail-under=100 ../test 
+            pytest --cov=PythonAvance --cov-fail-under=100
             cd ../
 
     Run-on-MacOS:
@@ -101,4 +101,4 @@ jobs:
         - name: Test with pytest
           run: |
             cd tests
-            pytest --cov=PythonAvance --cov-fail-under=100 tests/
+            pytest --cov=PythonAvance --cov-fail-under=100
