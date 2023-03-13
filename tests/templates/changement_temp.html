@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %}FastAPI Starter{% endblock %} {%
+block head %} {{ super() }} {% endblock %} {% block page_content %} {% include
+'include/sidebar.html' %}
+
+<h1 class="display-1">{{data.page}}</h1>
+<!-- <h6>{{data.soustitre}}</h6> -->
+<p>graphique resprésentant</p>
+
+<div class="position-absolute">
+  <img
+    src="https://hips.hearstapps.com/hmg-prod/images/jokes-for-kids-14-1631055180.png?crop=1xw:0.6666666666666666xh;center,top&resize=980:*"
+    class="img-fluid"
+    alt="Graphiques"
+  />
+</div>
+
+{% endblock %} {% block scripts %} {{ super() }} {% endblock %}

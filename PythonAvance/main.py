@@ -23,14 +23,6 @@ async def page(request: Request):
     }
     return templates.TemplateResponse("about.html", {"request": request, "data": data})
 
-@app.get("/page/info", response_class=HTMLResponse)
-async def page(request: Request):
-    data = {
-        "page": "info",
-        "soustitre": "les infos"
-    }
-    return templates.TemplateResponse("info.html", {"request": request, "data": data})
-
 @app.get("/page/png", response_class=HTMLResponse)
 async def page(request: Request):
     data = {

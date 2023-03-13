@@ -1,15 +1,17 @@
 {% extends "base.html" %} {% block title %}FastAPI Starter{% endblock %} {%
 block head %} {{ super() }} {% endblock %} {% block page_content %} {% include
 'include/sidebar.html' %}
+
 <h1 class="display-1">{{data.page}}</h1>
-<h6>{{data.soustitre}}</h6>
-<br />
-<div>
-  <p>Nous sommes des étudiants d'Ynov en B3</p>
-  <ul>
-    <li>Valentin DIOLOGENT</li>
-    <li>Adrien CLAMADIEU</li>
-    <li>Clément AUGIER de MOUSSAC</li>
-  </ul>
+<!-- <h6>{{data.soustitre}}</h6> -->
+<p>graphique resprésentant</p>
+
+<div class="position-absolute">
+  <img
+    src="https://media.discordapp.net/attachments/1079722540152410154/1084760890966024213/mean_temp.png?width=800&height=600"
+    class="img-fluid"
+    alt="Graphiques"
+  />
 </div>
+
 {% endblock %} {% block scripts %} {{ super() }} {% endblock %}
