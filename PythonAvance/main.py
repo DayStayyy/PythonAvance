@@ -28,7 +28,8 @@ async def about(request: Request) -> Response:
 async def png(request: Request) -> Response:
     data = {
         "page": "Analyse des données Météo France",
-        "soustitre": "les png"
+        "soustitre": "Listing des questions afin de répondre aux questions",
+        "annees_chaudes": "PythonAvance\PythonAvance\static\picture\annees_chaudes.png"
     }
     return templates.TemplateResponse("png.html", {"request": request, "data": data})
 
